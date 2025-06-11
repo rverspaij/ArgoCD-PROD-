@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/rverspaij/ArgoCD-PROD-.git
     targetRevision: HEAD
-    path: apps/dev/ingress-nginx/manifests
+    path: apps/dev/nginx-ingress/manifests
   destination:
     server: https://kubernetes.default.svc
     namespace: ingress-nginx
