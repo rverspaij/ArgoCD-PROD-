@@ -4,7 +4,9 @@ metadata:
   name: auth-service
   namespace: gateway
 spec:
-  type: ExternalName
-  externalName: auth-service.auth.svc.cluster.local
+  selector:
+    app: auth-service  # Zorg dat de Deployment in de `auth` namespace deze label heeft
   ports:
     - port: 80
+      targetPort: 8080
+  type: ClusterIP
