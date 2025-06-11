@@ -11,7 +11,7 @@ spec:
     - host: user.50.85.57.248.nip.io
       http:
         paths:
-          - path: /
+          - path: /user
             pathType: Prefix
             backend:
               service:

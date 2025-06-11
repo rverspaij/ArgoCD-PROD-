@@ -11,7 +11,7 @@ spec:
     - host: auth.50.85.57.248.nip.io
       http:
         paths:
-          - path: /
+          - path: /auth
             pathType: Prefix
             backend:
               service:
