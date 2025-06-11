@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: user-service
+  name: auth-service
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: git@github.com:rverspaij/argo-cd-gitops.git
+    repoURL: https://github.com/rverspaij/ArgoCD-PROD-.git
     targetRevision: HEAD
-    path: apps/dev/user-service/manifests
+    path: apps/dev/auth-service/manifests
   destination:
     server: https://kubernetes.default.svc
-    namespace: user
+    namespace: auth
   syncPolicy:
     automated:
       prune: true

@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ingress-nginx
+  name: nginx-gateway-fabric
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://kubernetes.github.io/ingress-nginx
-    chart: ingress-nginx
-    targetRevision: 4.10.0
+    repoURL: https://helm.nginx.com/stable
+    chart: nginx-gateway-fabric
+    targetRevision: 0.1.0
     helm:
       values: |
-        controller:
+        gateway:
           service:
             type: LoadBalancer
   destination:
     server: https://kubernetes.default.svc
-    namespace: ingress-nginx
+    namespace: nginx-gateway
   syncPolicy:
     automated:
       prune: true
