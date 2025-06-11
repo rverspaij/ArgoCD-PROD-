@@ -6,9 +6,14 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/rverspaij/ArgoCD-PROD-.git
-    targetRevision: HEAD
-    path: apps/dev/nginx-gateway-fabric/manifests
+    repoURL: oci://ghcr.io/nginx/charts
+    chart: nginx-gateway-fabric
+    targetRevision: 0.1.0
+    helm:
+      values: |
+        nginx:
+          service:
+            type: LoadBalancer  # of NodePort als je wilt testen lokaal
   destination:
     server: https://kubernetes.default.svc
     namespace: nginx-gateway
