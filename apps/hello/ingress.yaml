@@ -3,11 +3,17 @@ kind: Ingress
 metadata:
   name: hello-ingress
   annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-staging
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+        - 50.85.57.248.nip.io
+      secretName: hello-tls
   rules:
-    - host: 50-85-57-248.nip.io   # 👈 gebruik nip.io in plaats van een IP-adres
+    - host: 50.85.57.248.nip.io
       http:
         paths:
           - path: /
