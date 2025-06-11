@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-app
+  name: user
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/rverspaij/ArgoCD-PROD-.git
+    repoURL: git@github.com:your-user/argo-cd-gitops.git
     targetRevision: HEAD
-    path: apps/hello
+    path: apps/dev/user
   destination:
     server: https://kubernetes.default.svc
-    namespace: hello
+    namespace: user
   syncPolicy:
     automated:
       selfHeal: true

@@ -1,21 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
+  name: auth
+  labels:
+    app: auth
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello
+      app: auth
   template:
     metadata:
       labels:
-        app: hello
+        app: auth
     spec:
       containers:
-        - name: hello
+        - name: auth
           image: hashicorp/http-echo
           args:
-            - "-text=Hello from ArgoCD!"
+            - "-text=Hello from Auth Service"
           ports:
             - containerPort: 5678

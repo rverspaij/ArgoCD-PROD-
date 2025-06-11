@@ -1,19 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-app
+  name: chat
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/rverspaij/ArgoCD-PROD-.git
+    repoURL: git@github.com:your-user/argo-cd-gitops.git
     targetRevision: HEAD
-    path: bootstrap
+    path: apps/dev/chat
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: chat
   syncPolicy:
     automated:
       selfHeal: true
