@@ -1,6 +1,4 @@
 resources:
   - auth-service/application.yaml
   - user-service/application.yaml
-  - gateway/gateway.yaml
-  - gateway/gatewayclass.yaml
-  - nginx-gateway-fabric/application.yaml
+  - nginx-ingress/ingress.yaml
