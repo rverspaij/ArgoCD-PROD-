@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/rverspaij/ArgoCD-PROD-.git
     targetRevision: HEAD
-    path: apps/dev
+    path: bootstrap
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
