@@ -7,13 +7,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/rverspaij/ArgoCD-PROD-.git
-    chart: nginx-gateway-fabric
-    targetRevision: 0.1.0
-    helm:
-      values: |
-        gateway:
-          service:
-            type: LoadBalancer
+    targetRevision: HEAD
+    path: apps/dev/nginx-gateway-fabric/manifests
   destination:
     server: https://kubernetes.default.svc
     namespace: nginx-gateway
