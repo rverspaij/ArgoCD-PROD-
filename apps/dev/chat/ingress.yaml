@@ -4,12 +4,11 @@ metadata:
   name: chat-ingress
   namespace: chat
   annotations:
-    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
-    - host: chat.50.85.57.248.nip.io
-      http:
+    - http:
         paths:
           - path: /chat
             pathType: Prefix
