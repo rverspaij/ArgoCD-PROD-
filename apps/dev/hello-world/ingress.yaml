@@ -3,19 +3,13 @@ kind: Ingress
 metadata:
   name: hello-world-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    cert-manager.io/cluster-issuer: letsencrypt-staging
+    nginx.ingress.kubernetes.io/rewrite-target: /     # essentieel!
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-        - hello.yourdomain.com
-      secretName: hello-world-tls
   rules:
-    - host: hello.yourdomain.com
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /hello
             pathType: Prefix
             backend:
               service:
