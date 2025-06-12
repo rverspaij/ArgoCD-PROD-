@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: user-html
-  namespace: user
-data:
-  index.html: |
-    <html><body><h1>User Service</h1></body></html>
