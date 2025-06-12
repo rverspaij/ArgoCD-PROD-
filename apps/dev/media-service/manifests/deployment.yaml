@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-service
+  name: media-service
   labels:
-    app: user-service
+    app: media-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-service
+      app: media-service
   template:
     metadata:
       labels:
-        app: user-service
+        app: media-service
     spec:
       containers:
-        - name: user-service
+        - name: media-service
           image: docker.io/huyenthai01/media-service:latest
           ports:
             - containerPort: 80

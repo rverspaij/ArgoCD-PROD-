@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-service
+  name: frontend-service
   labels:
-    app: auth-service
+    app: frontend-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: auth-service
+      app: frontend-service
   template:
     metadata:
       labels:
-        app: auth-service
+        app: frontend-service
     spec:
       containers:
-        - name: auth-service
+        - name: frontend-service
           image: docker.io/huyenthai01/messaging-frontend:latest
           ports:
             - containerPort: 80
