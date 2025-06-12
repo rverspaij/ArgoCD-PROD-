@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: docker.io/huyenthai01/chat-service:latest
+          image: docker.io/huyenthai01/authentication-service:latest
           ports:
             - containerPort: 80
