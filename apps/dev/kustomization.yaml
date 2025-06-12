@@ -1,4 +1,4 @@
 resources:
-  - auth-service/application.yaml
-  - user-service/application.yaml
+  - frontend-service/application.yaml
+  - media-service/application.yaml
   - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/cloud/deploy.yaml
