@@ -31,7 +31,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: env
-          image: docker.io/huyenthai01/auth-service:latest
+          image: docker.io/huyenthai01/authentication-service:latest
           name: auth-service
           ports:
             - containerPort: 8080
