@@ -5,6 +5,8 @@ namespace: auth
 
 resources:
   - manifests/namespace.yaml
+  - manifests/configmap.yaml
+  - manifests/azure-secret.yaml
   - manifests/deployment.yaml
   - manifests/service.yaml
   - manifests/ingress.yaml

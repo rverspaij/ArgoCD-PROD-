@@ -31,6 +31,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: env
+            - secretRef:
+                name: azure-secret
           image: docker.io/huyenthai01/authentication-service:latest
           name: auth-service
           ports:
