@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: docker.io/huyenthai01/user-service:latest
+          image: docker.io/huyenthai01/media-service:latest
           ports:
             - containerPort: 80
