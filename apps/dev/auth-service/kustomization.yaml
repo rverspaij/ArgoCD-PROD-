@@ -4,6 +4,7 @@ kind: Kustomization
 namespace: auth
 
 resources:
+  - manifests/namespace.yaml
   - manifests/deployment.yaml
   - manifests/service.yaml
   - manifests/ingress.yaml
