@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: auth-service
+  namespace: auth
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/rverspaij/ArgoCD-PROD-.git
+    targetRevision: HEAD
+    path: apps/auth-service/manifests   # map met losse YAML's
+    directory:
+      recurse: true                     # zodat hij alle YAMLs leest
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: auth                     # <- namespace waarnaar gedeployed wordt
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
