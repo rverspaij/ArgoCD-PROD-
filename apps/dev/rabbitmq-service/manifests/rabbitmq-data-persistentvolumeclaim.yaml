@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  namespace: rabbitmq
   labels:
     io.kompose.service: rabbitmq-data
   name: rabbitmq-data
