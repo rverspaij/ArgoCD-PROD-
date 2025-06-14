@@ -10,3 +10,5 @@ resources:
   - manifests/ingress.yaml
   - manifests/db-deployment.yaml
   - manifests/db-service.yaml
+
+namespace: auth
