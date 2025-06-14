@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - manifests/rabbitmq-data-persistentvolumeclaim.yaml
-  - rabbitmq-deployment.yaml
-  - rabbitmq-service.yaml
+  - manifests/rabbitmq-deployment.yaml
+  - manifests/rabbitmq-service.yaml
 
-namespace: auth
+namespace: rabbitmq
