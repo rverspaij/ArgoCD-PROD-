@@ -9,5 +9,6 @@ resources:
   - manifests/db-deployment.yaml
   - manifests/db-service.yaml
   - manifests/data-persistentvolumeclaim.yaml
+  - manifests/env.yaml
 
 namespace: chat
