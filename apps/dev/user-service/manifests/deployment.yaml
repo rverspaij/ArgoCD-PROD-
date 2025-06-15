@@ -25,7 +25,7 @@ spec:
             - name: ASPNETCORE_ENVIRONMENT
               value: Production
             - name: ConnectionStrings__DefaultConnection
-              value: Server=user-db;Database=userdbser;User Id=sa;Password=Roxana1234;Encrypt=False;TrustServerCertificate=True;
+              value: Server=user-db;Database=usersdb;User Id=sa;Password=Roxana1234;Encrypt=False;TrustServerCertificate=True;
             - name: RabbitMq__Host
               value: rabbitmq.rabbitmq.svc.cluster.local
           envFrom:
