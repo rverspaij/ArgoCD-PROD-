@@ -3,12 +3,11 @@ kind: Kustomization
 
 resources:
   - manifests/namespace.yaml
-  - manifests/env.yaml
- # - manifests/azure-secret.yaml
   - manifests/deployment.yaml
   - manifests/service.yaml
   - manifests/ingress.yaml
   - manifests/db-deployment.yaml
   - manifests/db-service.yaml
+  - data-persistentvolumeclaim.yaml
 
 namespace: auth
