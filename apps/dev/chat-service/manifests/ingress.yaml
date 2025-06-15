@@ -18,3 +18,10 @@ spec:
                 name: chat-service
                 port:
                   number: 8080
+          - path: /chatHub
+            pathType: Prefix
+            backend:
+              service:
+                name: chat-service
+                port:
+                  number: 8080
