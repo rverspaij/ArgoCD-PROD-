@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - frontend-application.yaml
-  - media-application.yaml
+  #- media-application.yaml
   - auth-application.yaml
   - rabbitmq-application.yaml
   - chat-application.yaml
