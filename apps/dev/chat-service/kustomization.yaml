@@ -10,4 +10,4 @@ resources:
   - manifests/db-service.yaml
   - manifests/data-persistentvolumeclaim.yaml
 
-namespace: auth
+namespace: chat
