@@ -18,6 +18,3 @@ spec:
                 name: auth-service
                 port:
                   number: 8080
-
-
-http://135.236.79.163/auth/api/auth/
