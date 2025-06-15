@@ -4,6 +4,13 @@ metadata:
   name: chat-service
   namespace: argocd
 spec:
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: chat-service
+      namespace: chat
+      jsonPointers:
+        - /spec/replicas
   project: default
   source:
     repoURL: https://github.com/rverspaij/ArgoCD-PROD-.git
