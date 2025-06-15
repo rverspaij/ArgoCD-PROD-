@@ -7,4 +7,5 @@ resources:
   - auth-application.yaml
   - rabbitmq-application.yaml
   - chat-application.yaml
+  - user-application.yaml
   - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/cloud/deploy.yaml
