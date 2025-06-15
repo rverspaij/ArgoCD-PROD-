@@ -24,10 +24,11 @@ spec:
         - env:
             - name: ASPNETCORE_ENVIRONMENT
               value: Production
-            - name: ConnectionStrings__DefaultConnection
-              value: Server=user-db;Database=usersdb;User Id=sa;Password=Roxana1234;Encrypt=False;TrustServerCertificate=True;
             - name: RabbitMq__Host
               value: rabbitmq.rabbitmq.svc.cluster.local
+          envFrom:
+            - configMapRef:
+                name: env
           image: docker.io/huyenthai01/user-service:latest
           name: user-service
           ports:
