@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: frontend-service
-          image: docker.io/huyenthai01/messaging-frontend:f442a42
+          image: docker.io/huyenthai01/messaging-frontend:50a13ac
           ports:
             - containerPort: 80
