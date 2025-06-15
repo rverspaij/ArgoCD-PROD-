@@ -10,5 +10,6 @@ resources:
   - manifests/db-service.yaml
   - manifests/data-persistentvolumeclaim.yaml
   - manifests/env.yaml
+  - manifests/hpa.yaml
 
 namespace: chat
